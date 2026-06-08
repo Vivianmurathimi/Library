@@ -1,17 +1,10 @@
 package learning.library.domain;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 public class Author {
 
     private Long id;
-
-    @JsonProperty("first_name")
     private String firstName;
-
-    @JsonProperty("last_name")
     private String lastName;
-
     private String nationality;
 
     public Author() {}

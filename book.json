@@ -1,0 +1,13 @@
+{
+	"id": 1,
+	"title": "Harry Potter",
+	"genre": "Fantasy",
+	"published_year": 1997,
+	"published_date": "26/06/1997",
+	"author": {
+		"id": 1,
+		"first_name": "J.K.",
+		"last_name": "Rowling",
+		"nationality": "British"
+	}
+}

@@ -1,30 +1,27 @@
 package learning.library.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import java.time.LocalDate;
 
 public class Book {
 
     private Long id;
     private String title;
     private String genre;
-
-    @JsonProperty("published_year")
     private int publishedYear;
-
-    @JsonIgnore
     private String internalCode;
-
+    private LocalDate publishedDate;
     private Author author;
 
-    public Book() {}   // Jackson needs this to deserialize incoming JSON
+    public Book() {}
 
-    public Book(Long id, String title, String genre, int publishedYear, String internalCode, Author author) {
+    public Book(Long id, String title, String genre, int publishedYear,
+                String internalCode, LocalDate publishedDate, Author author) {
         this.id = id;
         this.title = title;
         this.genre = genre;
         this.publishedYear = publishedYear;
         this.internalCode = internalCode;
+        this.publishedDate = publishedDate;
         this.author = author;
     }
 
@@ -33,5 +30,6 @@ public class Book {
     public String getGenre() { return genre; }
     public int getPublishedYear() { return publishedYear; }
     public String getInternalCode() { return internalCode; }
+    public LocalDate getPublishedDate() { return publishedDate; }
     public Author getAuthor() { return author; }
 }

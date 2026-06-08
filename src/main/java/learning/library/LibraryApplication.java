@@ -1,5 +1,6 @@
 package learning.library;
 
+import learning.library.utils.JsonFileWriter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class LibraryApplication {
 
     public static void main(String[] args) {
+        JsonFileWriter.writeToFiles();
         SpringApplication.run(LibraryApplication.class, args);
     }
-
 }
